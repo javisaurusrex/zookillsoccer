@@ -36,3 +36,4 @@ Inspiration: http://www.sitepoint.com/setting-up-es6-project-using-babel-browser
 7. "git status" (check that changed files were added)
 8. "git commit -m 'first upload'" (commit to upload with this "snapshot")
 9. "git push origin master" (you'll be prompted for username and pwd)
+# ZooKiller
