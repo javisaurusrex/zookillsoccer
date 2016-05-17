@@ -1,8 +1,8 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-/** 
+/**
  * Create ES6 Classes.
- * To make this work, you must be running the Babel transpiler, 
- * and watching for changes in this file with browserify. Two 
+ * To make this work, you must be running the Babel transpiler,
+ * and watching for changes in this file with browserify. Two
  * Terminal windows need to be open:
  * 1. one window where you typed the command "grunt"
  * 2. one window where you typed the command "npm start"
@@ -23,11 +23,11 @@ var GamePiece = (function () {
         this.uuid = this.setId();
     }
 
-    /** 
+    /**
      * Arena objects derive directly from generic GamePiece
      */
 
-    /** 
+    /**
      * Generate a unique ID for every game object.
      * @link http://stackoverflow.com/questions/105034/create-guid-uuid-in-javascript
      */
@@ -45,7 +45,7 @@ var GamePiece = (function () {
         return uuid;
     };
 
-    /** 
+    /**
      * Return the given name of this object.
      */
 
@@ -53,7 +53,7 @@ var GamePiece = (function () {
         return this.name;
     };
 
-    /** 
+    /**
      * Return the unique id of this object.
      */
 
@@ -73,7 +73,7 @@ var Arena = (function (_GamePiece) {
         _GamePiece.call(this, credentials);
     }
 
-    /** 
+    /**
      * Sample file configuration.
      */
     return Arena;
