@@ -1,22 +1,22 @@
-/** 
+/**
  * GamePiece.js
  * Basic Game object
  *
- * To make this work, you must be running the Babel transpiler, 
- * and watching for changes in this file with browserify. Two 
+ * To make this work, you must be running the Babel transpiler,
+ * and watching for changes in this file with browserify. Two
  * Terminal windows need to be open:
  * 1. one window where you typed the command "grunt"
  * 2. one window where you typed the command "npm start"
  */
 export default class GamePiece {
 
-    constructor (credentials) {
+    constructor (config) {
     	//TODO: use super();
-        this.name = credentials.name;
+        this.name = config.name;
         this.uuid = this.setId();
     }
 
-    /** 
+    /**
      * Generate a unique ID for every game object.
      * @link http://stackoverflow.com/questions/105034/create-guid-uuid-in-javascript
      */
@@ -33,19 +33,17 @@ export default class GamePiece {
         return uuid;
     }
 
-    /** 
+    /**
      * Return the given name of this object.
      */
     getName () {
         return this.name;
     }
 
-    /** 
+    /**
      * Return the unique id of this object.
      */
     getId () {
         return this.uuid;
     }
 }
-
-
