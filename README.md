@@ -1,9 +1,7 @@
-# es6-boilerplate
+# zookillsoccer
 ---------------------
 
-A basic project to get started with es6 using babel, node-sass and browserify. It uses browserify to watch for changes in your JavaScript and SASS (scss) files. If you save a change to JavaScript, browserify will automatically run the Babel transpiler, converting any ES6 code you write into more compatible ES5 code. Likewise, if you save a change to a .scss file, browserify will run the Sass program, converting Sass data to pure CSS.
-
-Inspiration: http://www.sitepoint.com/setting-up-es6-project-using-babel-browserify/
+A basic game designed to teach concepts in OOP programming. Derived from es6-boilerplate on this same site.
 
 ## Setup and installation (Make sure NodeJS is installed)
 1. Open TWO terminal windows
@@ -36,4 +34,20 @@ Inspiration: http://www.sitepoint.com/setting-up-es6-project-using-babel-browser
 7. "git status" (check that changed files were added)
 8. "git commit -m 'first upload'" (commit to upload with this "snapshot")
 9. "git push origin master" (you'll be prompted for username and pwd)
-# ZooKiller
+
+## Adding new ES6 classes
+1. Create a new file, whose name is same as the class (e.g. Something.js for an ES6 class "Animal.js")
+2. Create the ES6 classes in the file. 
+3. It may be useful to create inheritance classes in one files
+     class Animal {...}
+     class Mammal extends Mammal {...}
+   However, it is a common practice to have one class per file
+4. If you are subclassing, remember to put the Import at the top
+   import Animal from './Animal.js'
+   class Mammal extends Animal {...}
+3. Remember to add super() to the subclasses
+4. Export the ES6 class 
+     export {Animal, Mammal}
+5. In the main file (index.js) do an ES6 class import
+     import {Animal, Mammal} from './Animal.js'
+
