@@ -69,6 +69,9 @@ var myGameScreen = new GameScreen({
   name: 'We are playing'})
   console.log(myGameScreen.getName());
 //test EndScreen
+var myEndScreen = new EndScreen({
+  name: 'End of the Game'})
+  console.log(myEndScreen.getName());
 //test Info
 //test Text
 //test DynamicText

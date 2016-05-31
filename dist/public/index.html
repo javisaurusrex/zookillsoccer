@@ -16,12 +16,55 @@
 			<section id="content">
 				<div id="game">
 				<!--game object will be attached here-->
+				<!--screens-->
+					<div id="start-screen"></div>
+						<header id="start-screen-identity">
+							<h2 class="identity">ZooKillSoccer</h2>
+						</header>
+						<section id="instructions" class="header-static-text">
+							<!--load instructions here-->
+						</section>
+						<section id="start-screen-play">
+							<!--start button-->
+							<form>
+								<button id="start-screen-play-button">Start Game</button>
+							</form>
+						</section>
+						<footer class="footer"></footer>
+						<div id="game-screen">
+							<header id="game-screen-identity">
+								<h2 class="identity">ZooKillSoccer - Game</h2>
+							</header>
+							<section id="game-screen-arena" class="section">
+								<canvas id="game-screen-canvas" width="960" height="360"></canvas>
+							</section>
+							<footer class="footer"></footer>
+						</div>
+						<div id="end-screen">
+							<header id="end-screen-identity">
+								<h2 class"identity">ZooKillSoccer - Scores</h2>
+							</header>
+								<section id="end-screen-score-entry" class="section">
+									<form>
+										<label for="your-score">Type in Your Name:</label>
+										<input type="text" name="your-score" id="your-score" class="dynamic-text">
+									</form>
+								</section>
+								<section id="end-screen-high-scores" class="section">
+									<!--insert other people's scores here-->
+								</section>
+								<section id="end-screen-options" class="section">
+									<button id="end-screen-play-button">Replay Game</button>
+									<button id="end-screen-instructions-button">Instructions</button>
+							</section>
+							<footer class="footer"></footer>
+						</div>
 				</div>
 			</section>
 		</main>
 
 		<footer>
-			<p>&copy; 2016 Vegan Meat Market.</p>
+			<p>&copy; 2016 JSilva.</p>
 		</footer>
 		<script src="js/app.js"></script>
 	</body>
