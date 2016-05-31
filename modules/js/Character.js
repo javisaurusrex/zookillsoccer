@@ -11,4 +11,11 @@ export default class Character extends GamePiece {
     super(config); //init 'parent' GamePiece
   }
 
-};
+  update () {
+
+  }
+
+  draw () {
+
+  }
+}; //end of class

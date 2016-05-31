@@ -23,6 +23,7 @@ body {
 	padding: $defaultPadding;
 }
 
+
 /* Initially hide all the game screens, let game JS show */
 #start-screen, #game-screen, #end-screen {
 	background-color: $primaryColor;

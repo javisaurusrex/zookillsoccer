@@ -1,11 +1,14 @@
 /**
- * Create the game. Import the primary classes, and 'composit'
+ * Create the game. Import the primary classes, and 'composite'
  * the overall Game object out of instances of the classes.
  */
 import GamePiece from './GamePiece.js';
-import Screen from './Screen.js';
 
-//Screen inhertiance
+//The entire game
+import Game from './Game.js';
+
+//Screen inheritance
+import Screen from './Screen.js';
 import StartScreen from './StartScreen.js';
 import GameScreen from './GameScreen.js';
 import EndScreen from './EndScreen.js';
@@ -13,111 +16,53 @@ import EndScreen from './EndScreen.js';
 //Info inheritance
 import Info from './Info.js';
 import Text from './Text.js';
-import DynamicText from './DynamicText.js';
-import Score from './Score.js';
 import StaticText from './StaticText.js';
 import Identity from './Identity.js';
 import Instructions from './Instructions.js';
+import DynamicText from './DynamicText.js';
+import Score from './Score.js';
 
 //Character inheritance
 import Character from './Character.js';
 import Trump from './Trump.js';
 import Player from './Player.js';
-import Health from './Health.js';
 import Animal from './Animal.js';
 import Lion from './Lion.js';
 import Tiger from './Tiger.js';
 import Bear from './Bear.js';
 import Gorilla from './Gorilla.js';
+import Health from './Health.js';
 
-//Area inheritance
+//Area inheritance.
 import Area from './Area.js';
 import Cage from './Cage.js';
 import AnimalArea from './AnimalArea.js';
 import PlayerArea from './PlayerArea.js';
+
+//Test file (very simple testrunner)
+import Tests from '../../tests/Tests.js';
+
 /**
- * Set up the game.
+ * Set up tests.
  */
-var config = {
-    name:'Forest Trump or Donald Gump rulz'
-}
+var myTests = new Tests();
 
-// Make some test game objects
-var game = new GamePiece(config);
-console.log(game.getName());
+/**
+ * Set up the Game
+ */
+var myGame = new Game({name: "ZooKillSoccer"});
 
-var config2 = {
-  name: 'Thud Mutton, Esq'
-};
-var something = new GamePiece(config2);
-console.log(something.getName());
+/**
+ * EXPORT TO WEB CONSOLE
+ * To make something visible in Web console for debuggint, attach to window object
+ * NOTE: Professional code uses specialized testing modules like Mocha, Karma, and
+ * similar testing libraries.
+ */
 
-//test Screen
-var configScreen1 = {
-  name: 'Opening Screen'
-}
-var ascreen =new Screen(configScreen1);
-console.log(ascreen.getName());
+// we can run this test manually with tests.run();
+window.tests = myTests;
 
-//test StartScreen
-var myStartScreen = new StartScreen({
-  name: 'Begin!'})
-  console.log(myStartScreen.getName());
+// make the game object visible so we can inspect it.
+window.game = myGame;
 
-//test GameScreen
-var myGameScreen = new GameScreen({
-  name: 'We are playing'})
-  console.log(myGameScreen.getName());
-//test EndScreen
-var myEndScreen = new EndScreen({
-  name: 'End of the Game'})
-  console.log(myEndScreen.getName());
-//test Info
-//test Text
-//test DynamicText
-//test Score
-//test StaticText
-//test Identity
-//test Instructions
-//test Character
-//test Trump
-//test Player
-//test Health
-//test Animal
-
-//test Gorilla
-var myGorilla = new Gorilla({
-  name: 'Donkey Kong'})
-  console.log(myGorilla.getName());
-
-//test Tiger
-var myTiger = new Tiger ({
-  name: 'Tigger'})
-  console.log(myTiger.getName());
-
-//test Bear
-var myBear = new Bear ({
-  name: 'Baloo'})
-  console.log(myBear.getName());
-
-//test Lion
-var myLion = new Lion ({
-  name: 'Mufasa'})
-  console.log(myLion.getName());
-
-//test Area
-var myArea = new Area ({
-  name: 'Stadium Area'})
-  console.log(myArea.getName());
-
-//test Cage
-var myCage = new Cage ({
-  name: 'the damn cages'})
-  console.log(myCage.getName());
-//test AnimalArea
-//test PlayerArea
-//var area = new Area(config);
-//console.log(area.getName());
-
-//var character = new Character(config);
-//var player = new Player(config);
+console.log('ZOOKILLSOCCER Game initialized. Access game via "game". Use Tests.run() to test.')
