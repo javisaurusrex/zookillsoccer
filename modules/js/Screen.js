@@ -1,4 +1,4 @@
-/** 
+/**
  * Screen.js
  * Generic Screen object
  * @inherits GamePiece.js
@@ -10,10 +10,23 @@
  	constructor (config) {
  		super(config); //init 'parent' GamePiece
 
- 		this.game = config.game;
- 		this.screenId = config.id; // id of HTML <div> to use.
- 		window.config = config; //TEMPORARY DEBUG
- 		this.loadScreen(); //grab the <div> with the config.id
+    // save a reference to our parent Game object
+    this.game = config.game;
+
+    window.config = config; //////////////////DEBUG ONLY
+    console.log(config.id)
+
+    // Screens are defined in HTML, so save a regerence to our DOM id
+    this.domId = config.id;
+
+    // save a reference to the DOM element we're connected to
+ 		/*this.screenId = config.id; // id of HTML <div> to use.*/
+ 		/*window.config = config; //TEMPORARY DEBUG */
+    this.dom = document.getElementById(this.domId);
+    console.log(this.dom)
+ 		/*this.loadScreen(); //grab the <div> with the config.id*/
+    // insert the copyright info from the main Game Object
+    this.addWarning();
  	}
 
  	loadScreen () {
@@ -50,8 +63,3 @@
  	}
 
  } // end of class.
-
-
-
-
-

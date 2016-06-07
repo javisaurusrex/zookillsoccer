@@ -11,9 +11,33 @@
 export default class GamePiece {
 
     constructor (config) {
-    	//TODO: use super();
+        //TODO: use super();
         this.name = config.name;
         this.uuid = this.setId();
+        this.ready = true; // change to false for deferred loads
+    }
+
+    /** 
+     * Set a position for the object, also the position of the 
+     * DOM representation of the object
+     */
+    setDOMPosition (position) {
+        this.position = position;
+        if (this.dom) {
+            this.dom.style.top = position.top + 'px';
+            this.dom.style.left = position.left + 'px';
+        }
+    }
+
+    /** 
+     * Set the object size, also its DOM size
+     */
+    setDOMSize (size) {
+        this.size = size;
+        if (this.dom) {
+            this.dom.style.width = size.width + 'px';
+            this.dom.style.height = size.height + 'px';
+        }
     }
 
     /** 
@@ -34,17 +58,17 @@ export default class GamePiece {
     }
 
     /** 
-     * Return the Class name of this object.
-     */
-    getClass () {
-        return this.constructor.name; /* ES6 feature */
-    }
-
-    /** 
-     * Return the given name of this object.
+     * Return the given name of this object
      */
     getName () {
         return this.name;
+    }
+
+    /** 
+     * return the class of the object
+     */
+    getClass () {
+        return this.constructor.name;
     }
 
     /** 
@@ -55,43 +79,39 @@ export default class GamePiece {
     }
 
     /** 
-     * Return the bounding box (Rect) for this object onscreen.
+     * Get the enclosing box outside the object for external collisions
      */
     getCollisionRect () {
 
     }
 
     /** 
-     * Return the box (Rect) for a container object.
+     * Get the internal box when this object acts as a container for another
      */
     getBoundsRect () {
 
     }
+	
+	/** 
+	 * Generic 'ready' function (e.g. for delayed asset loads)
+	 */
+	setReady (val) {
+		this.ready = val;
+	}
 
     /** 
-     * Update the object. Override in sub-classes
+     * Generic update (override)
      */
     update () {
 
     }
 
-    /** 
-     * Draw the object. Override in sub-classes.
-     */
+     /** 
+      * generic draw (override)
+      */
     draw () {
 
     }
-
-} // end of class
-
-
-
-
-
-
-
-
-
-
+}
 
 

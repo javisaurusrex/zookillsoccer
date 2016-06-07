@@ -104,13 +104,7 @@ export default class Game extends GamePiece {
 	}
 
 	gameLoop () {
-		
+
 	}
 
 } // end of class.
-
-
-
-
-
-
