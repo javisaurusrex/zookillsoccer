@@ -1,14 +1,13 @@
-/**
-* Info.js
-* Generic information object
-* @inherits GamePiece
-*/
+/** 
+ * Info.js
+ * Generic informaiton object
+ * @inherits GamePiece
+ */
 import GamePiece from './GamePiece.js';
 
 export default class Info extends GamePiece {
 
-  constructor (config) {
-    super(config); //init 'parent' GamePiece
-  }
-
-};
+	constructor(config) {
+		super(config);
+	}
+}

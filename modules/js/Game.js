@@ -1,4 +1,4 @@
-/**
+/** 
  * Game.js
  * The entire Game object
  * @inherits GamePiece
@@ -43,14 +43,15 @@ export default class Game extends GamePiece {
 
 		super(config);
 
+		// Store the Ids of the DOM elements
 		this.screenNames = {
 			START_SCREEN : 'start-screen',
 			GAME_SCREEN : 'game-screen',
 			END_SCREEN : 'end-screen'
 		}
 
-		//Warning
-		this.warning = "This game belongs to us, and nobody else.";
+		// Warning
+		this.warning = 'This game belongs to us, and nobody else.';
 
 		//game reverts to StartScreen if unplayed
 		this.TIMEOUT = 5;
@@ -61,14 +62,15 @@ export default class Game extends GamePiece {
 		this.displayInfo = [];
 
 		this.init();
+
 		this.loadGame();
 
 	} //end of constructor
 
 	init () {
 		this.screens[this.screenNames.START_SCREEN] = new StartScreen({name: "Start Screen", id: this.screenNames.START_SCREEN, game:this});
-		this.screens[this.screenNames.GAME_SCREEN] = new GameScreen({name: "Game Screen", id: this.screenNames.GAME_SCREEN, game:this});
-		this.screens[this.screenNames.END_SCREEN] = new EndScreen({name: "End Screen", id: this.screenNames.END_SCREEN, game:this});
+		this.screens[this.screenNames.GAME_SCREEN] = new GameScreen({name: "Game Screen", id: this.screenNames.GAME_SCREEN, game: this});
+		this.screens[this.screenNames.END_SCREEN] = new EndScreen({name: "End Screen", id: this.screenNames.END_SCREEN, game: this});
 		this.state = this.screenNames.START_SCREEN;
 	}
 
@@ -102,6 +104,13 @@ export default class Game extends GamePiece {
 	}
 
 	gameLoop () {
-
+		
 	}
-} //end of class
+
+} // end of class.
+
+
+
+
+
+

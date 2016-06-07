@@ -1,5 +1,5 @@
-/**
- * Create the game. Import the primary classes, and 'composite'
+/** 
+ * Create the game. Import the primary classes, and 'composite' 
  * the overall Game object out of instances of the classes.
  */
 import GamePiece from './GamePiece.js';
@@ -42,7 +42,7 @@ import PlayerArea from './PlayerArea.js';
 //Test file (very simple testrunner)
 import Tests from '../../tests/Tests.js';
 
-/**
+/** 
  * Set up tests.
  */
 var myTests = new Tests();
@@ -52,10 +52,10 @@ var myTests = new Tests();
  */
 var myGame = new Game({name: "ZooKillSoccer"});
 
-/**
+/** 
  * EXPORT TO WEB CONSOLE
  * To make something visible in Web console for debuggint, attach to window object
- * NOTE: Professional code uses specialized testing modules like Mocha, Karma, and
+ * NOTE: Professional code uses specialized testing modules like Mocha, Karma, and 
  * similar testing libraries.
  */
 
@@ -66,3 +66,10 @@ window.tests = myTests;
 window.game = myGame;
 
 console.log('ZOOKILLSOCCER Game initialized. Access game via "game". Use Tests.run() to test.')
+
+
+
+
+
+
+

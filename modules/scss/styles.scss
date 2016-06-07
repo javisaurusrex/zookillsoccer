@@ -1,4 +1,4 @@
-/* SCSS File for ES6 boilerplate */
+/* SCSS File for ZooKillSoccer */
 
 /* ======= DEBUGGING ========= */
 
@@ -23,7 +23,6 @@ body {
 	padding: $defaultPadding;
 }
 
-
 /* Initially hide all the game screens, let game JS show */
 #start-screen, #game-screen, #end-screen {
 	background-color: $primaryColor;
@@ -37,12 +36,12 @@ body {
 
 /* game-screen */
 #game-screen {
-
+	
 }
 
 /* end-screen */
 #end-screen {
-
+	
 }
 
 /* ======== style the game button ======== */
@@ -64,47 +63,47 @@ $transition: all #{$speed} cubic-bezier(0.310, -0.105, 0.430, 1.400);
 	border-radius: 5px;
 	box-shadow: 0 0 20px 0 rgba(0,0,0,.3);
 	transition: $transition;
-
+	
 	&:hover {
-
+		
 		span {
 			left: -72%;
 			opacity: 0;
 		}
-
+		
 		.icon {
 			width: 100%;
-
+			
 			.fa {
 				font-size: 45px;
 			}
 		}
 	}
-
+	
 	&.success {
 		background-color: #27ae60;
-
+		
 		.icon {
-
+			
 			.fa-remove {
 				display: none;
 			}
-
+			
 			.fa-check {
 				display: inline-block;
 			}
 		}
 	}
-
+	
 	&:hover {
 		opacity: .9;
-
+		
 		.icon .fa-remove {
 			height: 46px;
 		}
 	}
-
+	
 	&:active {
 		opacity: 1;
 	}
-}
+} /* end of .button */

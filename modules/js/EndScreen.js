@@ -1,14 +1,14 @@
-/**
-* EndScreen.js
-* Ending screen for the game
-* @inherits Screen, GamePiece
-*/
-import GamePiece from './GamePiece.js';
-import Screen from './Screen.js';
+/** 
+ * EndScreen.js
+ * Ending screen for the game.
+ * @inherits Screen, GamePiece
+ */
+ import GamePiece from './GamePiece.js';
+ import Screen from './Screen.js';
+ 
+ export default class EndScreen extends Screen {
 
-export default class EndScreen extends Screen {
-
-  constructor (config) {
-    super(config);
-  }
-}
+ 	constructor (config) {
+ 		super(config);
+ 	}
+ }

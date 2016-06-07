@@ -1,15 +1,15 @@
-/**
-* PlayerArea.js
-* Area where the player is
-* @inherits Area, GamePiece
-*/
-import GamePiece from './GamePiece.js';
-import Area from './Area.js';
+/** 
+ * PlayerArea.js
+ * The region where the Player can move.
+ * @inherits GamePiece, Area
+ */
+ import GamePiece from './GamePiece.js';
+ import Area from './Area.js';
 
-export default class PlayerArea extends Area {
+ export default class PlayerArea extends Area {
 
-  constructor (config) {
-    super(config);
-  }
+ 	constructor (config) {
+ 		super(config);
+ 	}
 
-};
+ }

@@ -1,9 +1,9 @@
-/**
+/** 
  * GamePiece.js
  * Basic Game object
  *
- * To make this work, you must be running the Babel transpiler,
- * and watching for changes in this file with browserify. Two
+ * To make this work, you must be running the Babel transpiler, 
+ * and watching for changes in this file with browserify. Two 
  * Terminal windows need to be open:
  * 1. one window where you typed the command "grunt"
  * 2. one window where you typed the command "npm start"
@@ -16,7 +16,7 @@ export default class GamePiece {
         this.uuid = this.setId();
     }
 
-    /**
+    /** 
      * Generate a unique ID for every game object.
      * @link http://stackoverflow.com/questions/105034/create-guid-uuid-in-javascript
      */
@@ -33,46 +33,65 @@ export default class GamePiece {
         return uuid;
     }
 
+    /** 
+     * Return the Class name of this object.
+     */
     getClass () {
-      return this.constructor.name;
+        return this.constructor.name; /* ES6 feature */
     }
 
-    /**
+    /** 
      * Return the given name of this object.
      */
     getName () {
         return this.name;
     }
 
-    /**
+    /** 
      * Return the unique id of this object.
      */
     getId () {
         return this.uuid;
     }
 
-    /**
-    * Return the bounding box for this object onscreen.
-    */
-    getCollisionRect() {
+    /** 
+     * Return the bounding box (Rect) for this object onscreen.
+     */
+    getCollisionRect () {
 
     }
 
-    /**
-    *Return the box (Rect) for a container object
-    */
-    getBoundsRect() {
+    /** 
+     * Return the box (Rect) for a container object.
+     */
+    getBoundsRect () {
 
     }
-    
-    /**
-    *Update the object. override in sub-classes
-    */
+
+    /** 
+     * Update the object. Override in sub-classes
+     */
     update () {
 
     }
 
+    /** 
+     * Draw the object. Override in sub-classes.
+     */
     draw () {
 
     }
-}
+
+} // end of class
+
+
+
+
+
+
+
+
+
+
+
+
