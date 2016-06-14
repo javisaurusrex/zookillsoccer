@@ -53,4 +53,3 @@ A basic game designed to teach concepts in OOP programming. Derived from es6-boi
 5. In the main file (index.js) do an ES6 class import
      import {Animal, Mammal} from './Animal.js'
 
-statictext, css 
