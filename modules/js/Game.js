@@ -39,6 +39,10 @@ import Cage from './Cage.js';
 import AnimalArea from './AnimalArea.js';
 import PlayerArea from './PlayerArea.js';
 
+//Import Collider and Sounder objects
+import Collider from './Collider.js';
+import Sounder from './Sounder.js';
+
 export default class Game extends GamePiece {
 
 	constructor (config) {
@@ -150,8 +154,8 @@ export default class Game extends GamePiece {
 		this.displayCharacters.push(
 			new Trump(
 				{
-					name: 'Trump', position: {top: 450, left: 200},
-					path: 'img/trumps/trump.png',
+					name: 'Trump', position: {top: 420, left: 150}, //450,200//
+					path: 'img/trumps/trump1.png',
 					game: this
 				}
 			)
@@ -175,6 +179,15 @@ export default class Game extends GamePiece {
 		this.loadPlayers();
 		this.loadTrumps();
 
+		// add collision matrix
+		this.collider = new Collider(this.displayCharacters);
+		//load audio samples
+		this.soundPool = new Sounder();
+		this.soundPool.addSound('kick', 0.7);
+		this.soundPool.addSound('lion', 0.7);
+		this.soundPool.addSound('tiger', 0.7);
+		this.soundPool.addSound('bear', 0.7);
+		this.soundPool.addSound('gorilla', 0.7);
 		//make GameScreen visible
 
 		// initialize elapsed time
@@ -264,6 +277,7 @@ export default class Game extends GamePiece {
 			this.endGame();
 			return;
 		}
+		this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
 		this.update();
 		this.draw();
 

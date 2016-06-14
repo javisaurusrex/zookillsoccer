@@ -1,4 +1,4 @@
-/** 
+/**
  * Animal.js
  * The critters that Trump tries to stop from getting the Player.
  * @inherits GamePiece, Character
@@ -14,6 +14,11 @@
 
  	constructor (config) {
  		super (config);
- 	}
 
+    // Animals get RandomWalk motion
+    this.mover.initRandomWalk(0.02, 'bottom');
+ 	}
+  update () {
+    this.mover.updateRandomWalk();
+  }
  }

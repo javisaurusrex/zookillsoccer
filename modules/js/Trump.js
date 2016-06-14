@@ -1,4 +1,4 @@
-/** 
+/**
  * Trump.js
  * The ball-like Character you kick into Animals
  * @inherits GamePiece, Character
@@ -10,5 +10,12 @@
 
  	constructor (config) {
  		super (config);
+
+    //Trump gets PingPong motion
+    this.mover.initPingPong(0, this); //pingpong won't start yet
  	}
+
+  update () {
+    this.mover.updatePingPong(); //allows pingpong motion
+  }
  }

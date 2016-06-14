@@ -1,6 +1,6 @@
-/** 
+/**
  * Character.js
- * Game-generated or user avatars. Characters are rendered in Canvas, but have their 
+ * Game-generated or user avatars. Characters are rendered in Canvas, but have their
  * position computed and updated outside canvas.
  * @inherits GamePiece
  */
@@ -9,6 +9,9 @@
  import Info from './Info.js';
  import Image from './Image.js';
  import StaticImage from './StaticImage.js';
+
+ import Mover from './Mover.js';
+ import Collider from './Collider.js';
 
  export default class Character extends GamePiece {
 
@@ -28,8 +31,10 @@
  				path: config.path
  			}
  		);
+    //initialize a Mover object (animation)
+    this.mover = new Mover(this);
 
- 		// Images don't automatically load when they're not attached to the DOM, 
+ 		// Images don't automatically load when they're not attached to the DOM,
  		// or a CSS background image
  		this.image.load(config.path, function () {console.log('loaded:' + config.name);});
  	}

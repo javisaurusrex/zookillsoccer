@@ -26,7 +26,7 @@
  		this.hideFooter();
 
  		// load the background image
- 		this.loadBackground('img/screens/game-screen.png');
+ 		this.loadBackground('img/screens/game-screen1.png');
 
  		// get the section that has the canvas for overlay
  		var arena = document.getElementById('game-screen-arena');
